@@ -62,6 +62,7 @@ Pruebas realizadas con 500 millones de numeros para que el impacto de la concurr
 | 1 | 1 - 250000000 | 31250000125000000 | 127 ms |
 | 2 | 250000001 - 500000000 | 93750000125000000 | 128 ms |
 | **Total** | | | **149 ms** |
+
 JAVA
 
 <img width="865" height="166" alt="image" src="https://github.com/user-attachments/assets/f20e42f4-f0a0-4955-8670-8452e5776911" />
@@ -88,6 +89,8 @@ Con solo 2 hilos cada uno carga con 250 millones de numeros. El tiempo es el mas
 | 7 | 375000001 - 437500000 | 58 ms |
 | 8 | 437500001 - 500000000 | 71 ms |
 | **Total** | | **102 ms** |
+
+
 JAVA
 
 <img width="858" height="305" alt="image" src="https://github.com/user-attachments/assets/a656c8f5-c060-4680-8e8f-d1f73b18af31" />
@@ -123,6 +126,8 @@ Con 8 hilos el rango baja a 62.5 millones por hilo. El tiempo total cae un 32% r
 | 15 | 437500001 - 468750000 | 15 ms |
 | 16 | 468750001 - 500000000 | 15 ms |
 | **Total** | | **82 ms** |
+
+
 JAVA
 
 <img width="887" height="539" alt="image" src="https://github.com/user-attachments/assets/c0ec7dc6-a08d-4da4-b6c5-8ae2227b721a" />
