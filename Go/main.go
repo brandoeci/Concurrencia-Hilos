@@ -9,10 +9,13 @@ import (
 func contar(id, inf, sup int, wg *sync.WaitGroup) {
 	defer wg.Done()
 	start := time.Now()
+
+	suma := 0
 	for i := inf; i <= sup; i++ {
-		fmt.Printf("goroutine %d: %d\n", id, i)
+		suma += i
 	}
-	fmt.Printf("goroutine %d lista - %d ms\n", id, time.Since(start).Milliseconds())
+
+	fmt.Printf("goroutine %d lista (%d - %d) - suma: %d - %d ms\n", id, inf, sup, suma, time.Since(start).Milliseconds())
 }
 
 func main() {
