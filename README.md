@@ -151,13 +151,12 @@ Con 16 hilos el rango baja a 31.25 millones por hilo. El tiempo total baja otro 
 
 ---
 
-## Observaciones
- 
 **Mas hilos no siempre es mejor.** En Java el tiempo bajo consistentemente de 149ms a 102ms a 82ms al agregar mas hilos. En Go sin embargo el punto optimo fue 8 goroutines con 36ms — al pasar a 16 el tiempo subio a 47ms. Esto ocurre porque con 16 goroutines se supera el numero de nucleos fisicos disponibles y el overhead de coordinar y hacer context switching entre tantas goroutines empieza a costar mas de lo que se gana con la paralelizacion.
  
 **El no determinismo es real.** En el caso de 16 hilos en Java, algunos terminan en 15ms y otros en 72ms teniendo exactamente el mismo rango. Esto demuestra que el scheduler del sistema operativo decide cuando le da tiempo de CPU a cada hilo y eso cambia segun la carga del sistema en ese momento. No hay garantia de que el hilo 1 termine antes que el hilo 16.
  
 **Go es consistentemente mas rapido que Java.** Con 2 hilos Go es el doble de rapido; con 8 hilos casi el triple. Esto se debe a que las goroutines son hilos livianos manejados por el propio runtime de Go, mientras que los threads de Java son hilos del sistema operativo que tienen mayor overhead de creacion y gestion. Go ademas tiene un scheduler propio que distribuye las goroutines entre los nucleos de forma mas eficiente.
+
 ---
 
 ## Java vs Go
