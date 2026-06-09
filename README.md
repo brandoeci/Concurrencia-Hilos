@@ -137,7 +137,7 @@ GO
 
 
 
-Con 16 hilos el rango baja a 31.25 millones por hilo. El tiempo total baja otro 20% respecto a 8 hilos. Sin embargo la reduccion ya no es tan proporcional como entre 2 y 8 hilos — esto se debe a que el procesador tiene un numero fijo de nucleos fisicos y el overhead de coordinar mas hilos empieza a pesar.
+Con 16 hilos el rango baja a 31.25 millones por hilo. El tiempo total baja otro 20% respecto a 8 hilos. Sin embargo la reduccion ya no es tan proporcional como entre 2 y 8 hilos esto se debe a que el procesador tiene un numero fijo de nucleos fisicos y el overhead de coordinar mas hilos empieza a pesar.
 
 ---
 
